@@ -30,8 +30,7 @@ class WeatherFacade
   def self.get_location_forecast(location)
     forecast_data = WeatherFacade.get_weather_data(location)
     data = forecast_data[:current]
-    x = LocationForecast.new(data)
-    require "pry"; binding.pry
+    LocationForecast.new(data)
   end
 
   def self.get_weather_data(location)
