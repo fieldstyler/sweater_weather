@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe HikingService do
-  it 'can make a call and retrieve weather data' do
+  it 'can make a call and retrieve trail data' do
     lat = 39.9388
     lng = -105.2582
     trails_data = HikingService.get_trails(lat, lng)

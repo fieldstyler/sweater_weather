@@ -25,7 +25,6 @@ RSpec.describe 'Trails Request Given Location' do
     expect(forecast_info[:temperature]).to be_a(String)
     expect(trail_info[:data][:attributes]).to have_key(:trails)
     trail_attrs = trail_info[:data][:attributes][:trails]
-    require "pry"; binding.pry
     expect(trail_attrs).to be_an(Array)
     expect(trail_attrs[0]).to be_a(Hash)
     expect(trail_attrs[0]).to have_key(:name)

@@ -12,9 +12,13 @@ class TrailsFacade
     lng = data[1]
     trails_info = HikingService.get_trails(lat, lng)
     trails_info[:trails].map do |trail_attrs|
-      Trail.new(trail_attrs)
-    end 
-    require "pry"; binding.pry
+      Trail.new(trail_attrs, location)
+    end
+  end
+
+  def self.get_distance_to_trail(current_location, destination)
+    directions_info = DirectionsService.get_directions(current_location, destination)
+    directions_info[:route][:distance].to_s
   end
 
 end
