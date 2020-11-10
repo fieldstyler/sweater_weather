@@ -6,7 +6,7 @@ class BackgroundImage
     @credit = {
               source: 'https://images.unsplash.com/',
               author: attr[:results][0][:user][:name],
-              logo: 'https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60',
+              logo: 'https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60'
               }
   end
 end
