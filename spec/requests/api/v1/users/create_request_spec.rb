@@ -22,7 +22,6 @@ RSpec.describe User do
     expect(response).to be_successful
     expect(response.status).to eq(201)
     user_info = JSON.parse(response.body, symbolize_names: true)
-    require "pry"; binding.pry
     expect(user_info).to be_a(Hash)
     expect(user_info).to have_key(:data)
     expect(user_info[:data]).to be_a(Hash)

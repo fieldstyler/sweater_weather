@@ -1,7 +1,6 @@
 class ImagesFacade
-  attr_reader :location, :image
+  attr_reader :image
   def initialize(location)
-    @location = location
     @image = ImagesFacade.get_image_info(location)
   end
 
