@@ -10,4 +10,4 @@ bundle install
 bundle exec figaro install
 rails db:{create,migrate}
 ```
-Have fun on your Road Trip!
+Have fun on your Road Trip!!
