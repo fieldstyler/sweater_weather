@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Road Trip Request' do
+
   it 'can successfully login a user' do
     user = User.create(
                   {
@@ -20,7 +21,7 @@ RSpec.describe 'Road Trip Request' do
               }
     post '/api/v1/road_trip', headers: headers, params: params.to_json
     expect(response).to be_successful
-    expect(response.status).to eq(201)
+    expect(response.status).to eq(200)
     roadtrip_info = JSON.parse(response.body, symbolize_names: true)
     expect(roadtrip_info).to be_a(Hash)
     expect(roadtrip_info).to have_key(:data)
@@ -40,8 +41,8 @@ RSpec.describe 'Road Trip Request' do
     expect(road_trip_attrs[:travel_time]).to be_a(String)
     expect(road_trip_attrs).to have_key(:weather_at_eta)
     expect(road_trip_attrs[:weather_at_eta]).to be_a(Hash)
-    expect(road_trip_attrs[:weather_at_eta]).to have_key(:temperature)
-    expect(road_trip_attrs[:weather_at_eta][:temperature]).to be_a(Float)
+    expect(road_trip_attrs[:weather_at_eta]).to have_key(:temp)
+    expect(road_trip_attrs[:weather_at_eta][:temp]).to be_a(Float)
     expect(road_trip_attrs[:weather_at_eta]).to have_key(:conditions)
     expect(road_trip_attrs[:weather_at_eta][:conditions]).to be_a(String)
   end
