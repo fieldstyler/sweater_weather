@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! Welcome to Sweater Weather!
 
-Things you may want to cover:
+To use this application, complete the following steps:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+Clone this repo
+bundle install
+bundle exec figaro install
+rails db:{create,migrate}
+```
+Have fun on your Road Trip!
