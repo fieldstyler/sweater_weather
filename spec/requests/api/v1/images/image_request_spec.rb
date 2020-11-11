@@ -30,4 +30,8 @@ RSpec.describe 'Image Request Given Location' do
     expect(image_info[:credit]).to have_key(:author)
     expect(image_info[:credit][:author]).to be_a(String)
   end
+
+  it 'does not have the following attributes' do
+
+  end
 end

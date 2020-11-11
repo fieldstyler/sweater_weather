@@ -8,10 +8,6 @@ class User < ApplicationRecord
   private
   def generate_api_key
     new_api_key = SecureRandom.urlsafe_base64
-    if User.exists?(api_key: new_api_key)
-      generate_api_key
-    else
-      self.api_key = new_api_key
-    end
+    self.api_key = new_api_key
   end
 end
